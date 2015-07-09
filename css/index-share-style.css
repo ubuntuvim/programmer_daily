@@ -1,0 +1,23 @@
+
+
+.shareTo { /*display:inline; position:absolute; right:5px;top:0;*top:-14px*/ }
+
+.shareTo .shareBtn{display:inline;cursor:pointer;position:relative;padding-left:28px;z-index:999;padding-bottom:8px;*padding-bottom:0;top:1px;*top:3px}
+.shareTo .shareBtn span img{vertical-align:top}
+.shareTo .shareBtn span{position:absolute;left:7px}
+.shareTo .shareBtn .shareshowbtn{top:-1px;*top:2px}
+.shareTo .share{position:absolute;right:0;top:16px;*top:16px;
+    padding:8px;overflow:hidden;zoom:1; 
+    background:#fff;border:1px solid #dbdbdb;z-index:99999;_width:208px}
+.shareTo .share a{display:block;float:left;width:24px;height:24px;margin:0 3px;text-indent:-999em;overflow:hidden;padding-left:0}
+.share a{background:url(../images/common/share.png) no-repeat!important;width:24px;height:24px}
+.share .sharewb{background-position:0 -168px!important}
+.share .shareqzone{background-position:0 -144px!important}
+.share .sharesina{background-position:0 -72px!important}
+.share .shareqqemail{background-position:0 -24px!important}
+.share .sharepengyou{background-position:0 -192px!important;display:none!important}
+.share .sharerenren{background-position:0 -48px!important}
+.share .sharekaixin{background-position:0 0!important}
+.shareTo .share{width:170;_width:178px}
+
+

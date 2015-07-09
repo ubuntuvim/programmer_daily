@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="shortcut icon" type="image/ico" href="images/logo/15142.png" />
+    
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>登录 | 程序员的日常</title>
+    
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+<!--    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">-->
+     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    
+    <style type="text/css">
+        body {
+            background-image: url(images/bg/bg.png);
+        }
+        
+        .link-style-registe {
+            position: absolute;
+            right: 80px;
+            top: 10px;
+        }  
+        .link-style-help {
+            position: absolute;
+            right: 40px;
+            top: 10px;
+        } 
+/*        设置表单垂直居中 */
+        .my-form-style {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 30%;
+            margin: auto;
+        }
+        a {
+/*            color: white;*/
+        }
+        .my-img-style {
+            position: absolute;
+            left: 20px;
+            top: 5px;
+            float: left;
+        }
+        .my-span-style {
+            position: absolute;
+            left: 60px;
+            top: 7px;
+            float: left;
+            font-family: monospace;
+            font-weight: bold;
+            font-size: 17px;
+        }
+    </style>
+    
+  </head>
+  <body>
+  <div class="well" style="border-radius: 0px;">
+     <img src="images/logo/15142.png" alt="" height="32" width="32px" class="my-img-style">
+     <span class="my-span-style">Programmer's Daily</span>
+      <a href="" class="link-style-registe">注册</a>
+      <a href="" class="link-style-help">帮助</a>
+  </div>
+  <div class="container">
+   <form class="my-form-style" action="">
+    <div class="row">
+     <div class="col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-sx-offset-6 col-lg-4 col-md-4 col-sm-5 col-sx-6">
+      <div class="form-group">
+        <input type="text" class="form-control" id="username" placeholder="Username">
+      </div>
+      </div>
+      </div>
+      
+      <div class="row">
+      <div class="col-lg-offset-4 col-md-offset-4 col-sm-offset-4 col-sx-offset-6 col-lg-4 col-md-4 col-sm-5 col-sx-6">
+      <div class="form-group">
+        <input type="text" class="form-control" id="password_id" placeholder="Password">
+      </div>
+       </div>
+       </div>
+      
+<!--      <button type="submit" class="btn btn-info">Submit</button>-->
+   
+
+        <p class="text-muted text-center" hidden="hidden" style="margin-top:20px;">输入用户名和密码后，直接按 Enter 登录。</p>
+    </form>
+    
+    </div> <!-- // container -->
+   
+   
+   
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <script type="application/javascript">
+        $("#password_id").focusin(function() {
+            //显示提示文字
+            $(".text-muted").show();
+        });  
+    </script>
+  </body>
+</html>

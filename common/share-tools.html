@@ -1,0 +1,27 @@
+<span class="u-commt-share-tools shareTo" style="font-size:12px; color:#999">
+                <span class="share-box js-list-share-btn shareshowbtn" aid="114718" title="分享">
+                    <span class="">分享(2)</span>
+
+                    <div class="share" style="display: none;" bosszone="kjsy_share" id="showShareTools_{$vo.id}">
+                        <a onclick="postToWb(this.name,this.href,this.id); return false;" title="分享到微博" class="sharewb" name="{$vo.title}" href="{$vo.ctt_img_url}" id="{:U('Home/Index/detail', array('id' => $vo['id']))}">分享到微薄</a>
+
+                        <a onclick="postToQzone(this.name,'{$vo.ctt_summary}',this.href,this.id); return false;" title="分享到QQ空间" class="shareqzone" name="{$vo.title}" href="{$vo.ctt_img_url}" id="{:U('Home/Index/detail', array('id' => $vo['id']))}">分享到空间</a>
+
+                        <a href="javascript:void(0)" onclick="shareToSina(this.name,this.id); return false;" title="分享到新浪微博" class="sharesina" name="{$vo.title}" id="{:U('Home/Index/detail', array('id' => $vo['id']))}">分享到新浪微博</a>
+
+                        <a onclick="postToQQEmail(this.name,'{$vo.ctt_summary}',this.id,this.href); return false;" title="分享到QQ邮箱" class="shareqqemail" name="{$vo.title}" id="{$vo.ctt_img_url}" href="{:U('Home/Index/detail', array('id' => $vo['id']))}">分享到QQ邮箱</a>
+
+                        <a onclick="shareToQQ(this.name,this.href,this.id); return false;" title="分享到QQ好友" class="sharepengyou" name="{$vo.title}" furl="{$vo.ctt_img_url}" id="{:U('Home/Index/detail', array('id' => $vo['id']))}">分享到QQ好友</a>
+
+                        <a href="javascript:void(0)" onclick="shareToRenren(this.name,this.id); return false;" title="分享到人人" class="sharerenren" name="【{$vo.title}" id="{:U('Home/Index/detail', array('id' => $vo['id']))}">分享到人人</a>
+
+                        <a href="javascript:void(0)" onclick="shareToKaixin(this.name,this.id); return false;" title="分享到开心" class="sharekaixin" name="{$vo.title}" id="{:U('Home/Index/detail', array('id' => $vo['id']))}">分享到开心</a>
+                    </div>
+                </span>
+
+                &nbsp;&nbsp;
+                <span class="" style="cursor: pointer;" onclick="toDetailPage('{:U('Home/Index/detail', array('id' => $vo['id']))}');">评论(12)</span>
+                
+                &nbsp;&nbsp;
+                <span class="glyphicon glyphicon-arrow-up" style="cursor: pointer;" onclick="praise(this, '{$vo.id}');">赞</span>(3)&nbsp;&nbsp;&nbsp;
+            </span>
