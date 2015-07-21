@@ -15,87 +15,45 @@
         <meta property="og:title" content="Pure CSS transition effects for off-canvas views"/>
         
         <link rel="shortcut icon" type="image/ico" href="images/logo/15142.png" />
-    
-<link rel="stylesheet" href="pageloading/foundation.css"/>
-  
-   <link href="slide_bar_lib/css/app.css" rel="stylesheet" type="text/css" media="all"/>
-    <link rel="stylesheet" href="css/index-share-style.css">
-
-<link rel="stylesheet" href="css/animate.css">
-        <!-- Style block allowing child pages to inject their own styles -->
-        
     <!-- 新 Bootstrap 核心 CSS 文件 -->
-<!--    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">-->
-
-        
-
-        
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <!-- 可选的Bootstrap主题文件（一般不用引入） -->
 <!--    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">-->
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   
  
-  </head>
-   <style type="text/css">
-       .section {
-           background-image: url(images/bg/bg.png);
-           padding: 40px 0;
-       }
+ <style type="text/css">
+   .article-content-style {
+        position: absolute;
+        left: 0;
+        width: 59%;
+/*        background-color: antiquewhite;*/
+/*        border: 1px solid blue;*/
+    }
+/*    中间有2%的空隙 */
+    .article-title-style {
+        position: absolute;
+        left: 61%;
+        width: 39%;
+/*        background-color: antiquewhite;*/
+/*        border: 1px solid red;*/
+    }
        
-    .row {
-      width: 100%;
-/*
-      margin-left: 15px;
-      margin-right: 15px;
-*/
-      margin-top: 0;
-      margin-bottom: 0;
-      max-width: 80rem; 
+       
+   .article-comm-style {
+        position: absolute;
+        left: 70%;
+        width: 30%;
+        background-color: antiquewhite;
+        border: 1px solid green;
     }
-    /* 设置左侧菜单的样式，覆盖原有的样式 */
-    /* 设置背景为白色 */
-   .pure-drawer {  
-      background-color: #f9faff !important; 
-   }
-    /* 设置每个栏目的边框为空 */
-   .nav-primary {
-      margin: 0;
-      padding: 100px 0 0 0;
-      border-bottom: 0px solid #24323d; 
-   }
-    /* 去掉原来 li 标签的边框 */
-   .nav-primary li {
-        border-top: 0px solid #24323d;
-        border-bottom: 0px solid #3f566a; 
-   }
-    /* 设置链接样式 */
-   .nav-primary li a {
-      display: block;
-      color: #000;
-      padding: 10px 15px;
-    }
-    /* 设置鼠标移动到链接上的样式 */
-   .nav-primary li a:hover {
-        background-color: #f0f0f0; 
-   }
-   .panel {
-      clear: left;
-      color: #000;
-      background: #F8F8F8;
-      padding: 0 10px;
-      border: 0px solid #BC4F3D;
-      border-radius: 3px;
-    }
-    p {
-/*        color: #222;*/
-        font-size: 15px;
-    }
-    .logo-title-style {
+       
+   .logo-title-style {
         height: auto; 
         width: auto; 
         float: left; 
@@ -117,316 +75,323 @@
         margin: 8px 0 0 10px;
         font-size: 14px;
     }
-   </style>
-  
-  <body>
-   
-   <!--[if lt IE 9]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-<![endif]-->
-<!--  //  把左侧的菜单显示方式设置为默认的 fall in 特效  -->
-<div class="pure-container" data-effect="pure-effect-fall">
-   <!-- 左侧的菜单按钮 -->
-    <input type="checkbox" id="pure-toggle-left" class="pure-toggle" data-toggle="left"/>
-    <label class="pure-toggle-label" for="pure-toggle-left" data-toggle-label="left"><span class="pure-toggle-icon"></span></label>
-
-    <nav class="pure-drawer" data-position="left">
-        <div class="row collapse">
-            <div class="large-12 columns">
-                <ul class="nav-primary">
-                    <li><a href="index.html">首页</a></li>
-                    <li><a href="#">最奇葩的需求</a></li>
-                    <li><a href="#">最吐血的代码</a></li>
-                    <li><a href="#">最 SB 的经理</a></li>
-                    <li><a href="#">最有效的约妹大招</a></li>
-                    <li><a href="#">我的日常</a></li>
-                </ul> 
-            </div>
-        </div>
-    </nav>   
-        
-        
-<div style="padding: 15px 0 0 130px; padding-top:20px; font-size: 32px; font-weight: bold;">
-    <div class="">
-    <span class="font-animate-style" data-in-effect="rollIn">程序员的日常</span>
-    <span style="font-size: 15px;display:block; margin-top:10px;">
-    我们的口号是做中国最贴近码农思维的社区，让每个来访的 coder 都有一种家的感觉……
-    </span>
-    </div>
-</div>
-<div class="pure-pusher-container">
-    <div class="pure-pusher">
-
-       
-    <section class="section" data-scroll-index="0" id="">
-
-        <div class="row">
-
-            <div class="large-12 columns">
-            <div class="panel" data-animate-scroll='{"alpha": "0",
-                                "y":"50", 
-                                "duration": "1.75",
-                                "scaleX": "0",
-                                "scaleY": "0",
-                                "ease": "Elastic.easeIn"}'>
-                                
-            
-                <div>
-                    <img src="http://i1.tietuku.com/1f73778ea702c725.jpg" alt="" width="50" height="50" class="userlogo-style">
-                </div>
-                
-                <div class="logo-title-style">
-                    <div class="title-style">中文标题测试中文标题测试中文标题测试</div>
-                    <div class="public-info">java、互联网</div>
-                </div>
-            
-            
-            <p>中文内容测试测试测试中文内容测试测试测试中文内容测试测试测试中文内容测试测试测试salami ham hock biltong ball tip drumstick sirloin pancetta meatball short loin.
-            中文内容测试测试测试中文内容测试测试测试中文内容测试测试测试中文内容测试测试测试salami ham hock biltong ball tip drumstick sirloin pancetta meatball short loin.
-            中文内容测试测试测试中文内容测试测试测试中文内容测试测试测试中文内容测试测试测试salami
-            </p>
-            
-            
-            <iframe src="common/share-tools.html" frameborder=0 width=auto height=30 marginheight=0 marginwidth=0 scrolling=no ></iframe>
-            
-            </div>
-            </div>
-            <div class="large-12  columns">
-            <div class="panel" data-animate-scroll='{"x": "100",
-                                "y": "0", 
-                                "alpha": "0", 
-                                "duration": ".5"}'>
-            <div>
-                    <img src="http://i1.tietuku.com/1f73778ea702c725.jpg" alt="" width="50" height="50" class="userlogo-style">
-                </div>
-                
-                <div class="logo-title-style">
-                    <div class="title-style">中文标题测试中文标题测试中文标题测试</div>
-                    <div class="public-info">java、互联网</div>
-                </div>
-                
-            <p>This is a three columns grid panel with an arbitrary height.</p>
-            
-            <iframe src="common/share-tools.html" frameborder=0 width=auto height=30 marginheight=0 marginwidth=0 scrolling=no ></iframe>
-            </div>
-            
-            </div>
-            </div>
-            <div class="row">
-            <div class="large-12 columns">
-            <div class="panel" data-animate-scroll='{"x": "-20", 
-                                "alpha": "0", 
-                                "duration": "1.5"}'>
-                                
-            <div>
-                <img src="http://i1.tietuku.com/1f73778ea702c725.jpg" alt="" width="50" height="50" class="userlogo-style">
-            </div>
-
-            <div class="logo-title-style">
-                <div class="title-style">中文标题测试中文标题测试中文标题测试</div>
-                <div class="public-info">java、互联网</div>
-            </div>
-            
-            <p data-animate-scroll='{"x": "20", 
-                                "alpha": "0", 
-                                "duration": "1.5"}'>This is a six columns grid panel with an arbitrary height. Bacon ipsum dolor sit amet salami ham hock biltong ball tip drumstick sirloin pancetta meatball short loin.</p>
-                                
-                                <iframe src="common/share-tools.html" frameborder=0 width=auto height=30 marginheight=0 marginwidth=0 scrolling=no ></iframe>
-            </div>
-            </div>
-
-            <div class="large-12 columns">
-            <div class="panel" data-animate-scroll='{"x": "100", 
-                                "y":"100",
-                                "rotation":"-25",
-                                "alpha": "0", 
-                                "duration": "1.5",
-                                "scaleX": "0",
-                                "scaleY": "0"}'>
-                                
-            <div>
-                <img src="http://i1.tietuku.com/1f73778ea702c725.jpg" alt="" width="50" height="50" class="userlogo-style">
-            </div>
-
-            <div class="logo-title-style">
-                <div class="title-style">中文标题测试中文标题测试中文标题测试</div>
-                <div class="public-info">java、互联网</div>
-            </div>
-            <p>This is a four columns grid panel with an arbitrary height. Bacon ipsum dolor sit amet salami.</p>
-            
-            <iframe src="common/share-tools.html" frameborder=0 width=auto height=30 marginheight=0 marginwidth=0 scrolling=no ></iframe>
-            </div>
-            </div>
-            </div>
-            <div class="row">
-            <div class="large-12 columns">
-            <div class="panel">
-            <p>
-            <img src="http://i1.tietuku.com/1f73778ea702c725.jpg" data-animate-scroll='{"rotationY":"80%", 
-                                "duration": "2.5"}'/>
-            </p>
-            
-            <iframe src="common/share-tools.html" frameborder=0 width=auto height=30 marginheight=0 marginwidth=0 scrolling=no ></iframe>
-            </div>
-            </div>
-
-            <div class="large-12 columns">
-            <div class="panel" data-animate-scroll='{"scaleX": "0.1",
-                                "scaleY": "0.1",
-                                "rotation": "-360", 
-                                "alpha": "0", 
-                                "duration": "2"}'>
-            <p>
-            <img src="http://i1.tietuku.com/1f73778ea702c725.jpg" data-animate-scroll='{"rotation": "940", 
-                                "alpha": "0", 
-                                "duration": "2"}'/>
-                                
-                              
-            </p>
-            
-            <iframe src="common/share-tools.html" frameborder=0 width=auto height=30 marginheight=0 marginwidth=0 scrolling=no ></iframe>
-            </div>
-            </div>
-            </div>
-            <div class="row">
-            <div class="large-12 columns">
-            <div class="panel" data-animate-scroll='{"alpha": "0", 
-                                "duration": "2",
-                                "rotationX":"45",
-                                "rotationY":"-45",
-                                "z":"-30"}'>
-                                
-            <div>
-                <img src="http://i1.tietuku.com/1f73778ea702c725.jpg" alt="" width="50" height="50">
-            </div>
-
-            <div class="logo-title-style">
-                <div class="title-style">中文标题测试中文标题测试中文标题测试</div>
-                <div class="public-info">java、互联网</div>
-            </div>
-            <p>This is a six columns grid panel with an arbitrary height. Bacon ipsum dolor sit amet salami ham hock biltong ball tip drumstick sirloin pancetta meatball short loin.</p>
-            
-            <iframe src="common/share-tools.html" frameborder=0 width=auto height=30 marginheight=0 marginwidth=0 scrolling=no ></iframe>
-            
-            </div>
-            </div>
-            <div class="large-12 columns">
-            <div class="panel" data-animate-scroll='{"alpha": "0", 
-                                "duration": "2",
-                                "rotationX":"45",
-                                "z":"-30"}'>
-                                
-            <div>
-                <img src="http://i1.tietuku.com/1f73778ea702c725.jpg" alt="" width="50" height="50">
-            </div>
-
-            <div class="logo-title-style">
-                <div class="title-style">中文标题测试中文标题测试中文标题测试</div>
-                <div class="public-info">java、互联网</div>
-            </div>
-            <p>This is a three columns grid panel with an arbitrary height.</p>
-            
-            <iframe src="common/share-tools.html" frameborder=0 width=auto height=30 marginheight=0 marginwidth=0 scrolling=no ></iframe>
-            </div>
-            </div>
-            <div class="large-12 columns">
-            <div class="panel" data-animate-scroll='{"alpha": "0", 
-                                "duration": "2",
-                                "rotationY":"45",
-                                "z":"-30"}'>
-                                
-            <div>
-                <img src="http://i1.tietuku.com/1f73778ea702c725.jpg" alt="" width="50" height="50">
-            </div>
-
-            <div class="logo-title-style">
-                <div class="title-style">中文标题测试中文标题测试中文标题测试</div>
-                <div class="public-info">java、互联网</div>
-            </div>
-            <p>This is a three columns grid panel with an arbitrary height.</p>
-            
-            <iframe src="common/share-tools.html" frameborder=0 width=auto height=30 marginheight=0 marginwidth=0 scrolling=no ></iframe>
-            </div>
-            </div>
-            </div>
-    </section>
-
-
-    </div>
-</div>
-
-</div>
-
-   
+     
+     #comm-box { 
+         position: absolute;
+         right: 0;
+         top: 0;
+         z-index: 1000;
+         width:39%; 
+         height:100%; 
+/*         border:2px #d7cb9a solid; */
+         background:#fff; 
+/*         text-decoration: NONE;*/
+     }
     
+     #comm-box > div > a:hover {
+         text-decoration: none;
+     }
+     /*     弹出的回复界面样式，设置工具条的文字样式 */
+     .reply-comm-style, .reply-comm-style > span > a, .reply-comm-style > span > a:hover {
+         font-size:12px; 
+         color:#999;
+         text-decoration: NONE;
+     }
+    /* 左侧导航 */
+    .left-nav-panel {
+        display: none;
+        width: 220px;
+        padding: 20px;
+        background-color: #333;
+        color: #fff;
+      
+    }
+    .menu-btn-style {
+        margin: 15px 0 20px 25px;
+    }
+   </style>
+
+    
+</head>
+   
+  
+<body>
+<div class="menu-btn-style">
+<!--    <h1>Panel slider example</h1>-->
+    <a id="left-panel-link" href="#left-panel">
+<!--    <a id="left-panel-link" href="javascript: $('#left-panel').show();">-->
+        <img src="images/menu/open2.png" alt="" width="50" height="50" id="openMenuId">
+    </a> &nbsp;&nbsp;&nbsp;
+    <a id="lclose-panel-bt" href="#">
+        <img src="images/menu/close3.png" alt="" width="50" height="50" id="closeMenuId" hidden="hidden" style="margin-top: -15px;">
+    </a> 
+</div>
+
+<!-- Left panel -->
+<div id="left-panel" class="left-nav-panel">
+    <ul>
+        <li><a href="#0">This</a></li>
+        <li><a href="#0">Little</a></li>
+        <li><a href="#0">Piggy</a></li>
+        <li><a href="#0">Went</a></li>
+        <li><a href="#0">To</a></li>
+        <li><a href="#0">Market</a></li>
+      </ul>
+</div>
+
+
+
+<!-- // 显示评论框，以动画方式展示，从上往下进入的动画  --> 
+<div id="comm-box" hidden="hidden" style="padding-top: 15px;">
+    <div style="position: absolute; right: 30px;">
+        <a href="#" id="ss"><span class="glyphicon glyphicon-menu-up"></span>隐藏评论</a>    
+    </div>
+
+    <div class="feed-meta" style="padding-top: 30px;">
+        <div class="zm-item-meta zm-item-comment-el answer-actions clearfix">
+    <!--        <i class="icon icon-spike zm-comment-bubble" style="display: inline; left: 101.609375px;"></i>-->
+
+          <ul class="media-list">
+              <li class="media">
+                <div class="media-left">
+                  <a href="#">
+                    <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="">
+                  </a>
+                </div>
+                <div class="media-body">
+                <!-- 设置鼠标移动事件，当鼠标移到此标签上时显示评论按钮 -->
+                 <span 
+                      onmouseover="javascript:$($(this).children()[2]).children().show();" 
+                      onmouseout="javascript:$($(this).children()[2]).children().hide();">
+                  <span class="media-heading" style="font-size:16px; font-weight: bold;">张三</span>
+                  <p>
+                  新乡的表示9年回去还是老样子，9年初中3年高中3年大学3年
+                  </p>
+                  <p class="reply-comm-style">
+                     2015-07-16
+                      <span style="display: none;">
+                          <a href="">赞(22)</a>
+                          
+                          <a role="button" data-toggle="collapse" href="#collapseReply" aria-expanded="false" aria-controls="collapseReply" id="commBtnId" style="font-size:12px; color:#999;">回复(2)</a>
+                          
+                          <!-- <a href="">举报</a>-->
+                          
+                          <div class="collapse" id="collapseReply">
+                             <form action="" method="post">
+                              <div class="well" style="padding: 0px;margin-bottom: 10px;">
+                                <textarea class="form-control" rows="2" placeholder="请输入您的回复信息"></textarea>
+                              </div>
+                              <span class="">
+                                  <a data-toggle="collapse" href="#collapseReply" aria-expanded="false" aria-controls="collapseReply">取消</a>&nbsp;&nbsp;
+                                  <button type="submit" class="btn btn-primary btn-xs">回复</button>
+                              </span>
+                            </form>
+                          </div>
+                      </span>
+                      
+                  </p>
+                  </span>
+                  
+                  <!-- Nested media object -->
+                  <div class="media">
+                    <div class="media-left">
+                      <a href="#">
+                        <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="">
+                      </a>
+                    </div>
+                    <div class="media-body">
+                      <h4 class="media-heading">Nested media heading</h4>
+                      开封更沉溺于历史。人家都说 开封有意无意的与现代化保持着距离。
+                      <!-- Nested media object -->
+                      <div class="media">
+                        <div class="media-left">
+                          <a href="#">
+                            <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="">
+                          </a>
+                        </div>
+                        <div class="media-body">
+                          <h4 class="media-heading">Nested media heading</h4>
+                          西南中枪，，，来过西南大学的都知道，学校就是在山里，进了校门口就开始爬坡上坎了
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Nested media object -->
+                  <div class="media">
+                    <div class="media-left">
+                      <a href="#">
+                        <img class="media-object" data-src="holder.js/64x64" alt="64x64" src="">
+                      </a>
+                    </div>
+                    <div class="media-body">
+                      <h4 class="media-heading">Nested media heading</h4>
+                      武汉同学一嚷嚷武汉就是大农村的时候就想带他去郑州转转。
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+        </div>  <!-- // zm-item-meta zm-item-comment-el -->
+    </div>
+</div>
+
+   <div class="container-fluid">
+       <div class="row">
+           <div class="col-lg-12 col-md-12 col-sm-12">
+<!--               第二列，显示文章的详细信息-->
+               <div class="article-content-style">
+                  <h2 class="media-heading">Nested media heading</h2>
+                  
+                   <p>
+                       我给你讲一个真实的故事，几个月前我买了一台 Dell 的叼炸天的笔记本，号称是什么图形工作站，反正看配置玩一般的游戏问题肯定不大，因为我初中以后就开始用Linux，之后用Mac，不开玩笑的说我对Windows的理解依然只是停留在XP时代，所以直接让老板把常用软件帮我装上了，我也懒得搞了。我平时用Mac玩LOL的美服，第一次有电脑可以玩玩国服别提多兴奋了，淘宝买了一个30级的号就开战。
+
+上去直接打排位，第一把是用的皇子打野，上去就被红buff直接干死了，压根就没按出来技能。原来是卡了，想想家里百兆光纤不至于啊，看了一会是一阵一阵的卡，就没有多想继续玩。第一次团战的时候说好我开打先去切对方法师，等我控上去以后才发现大家团战已经差不多了，我直接把法师和我方只剩一丝血的ADC给圈到一起了，之后的聊天记录别提多刺激了……
+
+关了游戏，思考了一下人生，看了一眼电脑，打开迅雷，找了个片子去下，速度非常快，为什么会卡呢……
+
+打了第二局，我用风女直接把对方3个人吹到我方残血ADC面前。
+
+关了游戏，思考了一下人生，看了一眼电脑，打了一个1000，问电信这是怎么回事，电信说跟他们没关系，他们看的一切正常……
+
+打了第三局，因为没点开人，本来帮打野拉怪时直接把他的蓝buff给抢了。中盘的时候我方打小龙，打野问上不上，我先打了一个「shang」，之后的「ni ma bi」等打出来的时候发现已经团灭了，然后聊天记录就是大家在骂我的时候，我冒出来一句「ni ma bi」。
+
+我辛辛苦苦积攒下来的光辉形象几个小时内全被毁了，我先删掉了电脑上所有下载软件。打了第四局，还有……然后删了两个什么什么助手，打了第五局，还有……在我万分崩溃的时候问了一下别人，他们告诉我看一下后台下载不就可以了……
+
+于是我就发现了一个奇怪的进程「KGService.exe」。我脑补了几十个词汇，有Kilogram、Kevin Garnett、Kyrgyzstan、King game、Kalman gain，好像都没什么关心的样子，百度了一下告诉我…
+                   </p>
+               </div>
+<!--              第一列，显示文章的标题、摘要-->
+               <div class="article-title-style">
+                  <div>
+                      <div>
+                        <img src="http://i1.tietuku.com/1f73778ea702c725.jpg" alt="" width="50" height="50" class="userlogo-style">
+                    </div>
+
+                    <div class="logo-title-style">
+                        <div class="title-style">中文标题测试中文标题测试中文标题测试</div>
+                        <div class="public-info">java、互联网</div>
+                    </div>
+
+                    <p>中文内容测试测试测试中文内容测试测试测试中文内容测试测试测试中文内容测试测试测试salami ham hock biltong ball tip drumstick sirloin pancetta meatball short loin.
+                    中文内容测试测试测试中文内容测试测试测试中文内容测试测试测试中文内容测试测试测试salami 
+                    </p>
+                    
+                    
+                    
+                    <span class="u-commt-share-tools shareTo" style="font-size:12px; color:#999">
+                <span class="share-box js-list-share-btn shareshowbtn" aid="114718" title="分享">
+                    <span class="glyphicon glyphicon-share-alt">分享(2)</span>
+
+                    <div class="share" style="display: none;" bosszone="kjsy_share" id="showShareTools_{$vo.id}">
+                        <a onclick="postToWb(this.name,this.href,this.id); return false;" title="分享到微博" class="sharewb" name="{$vo.title}" href="{$vo.ctt_img_url}" id="{:U('Home/Index/detail', array('id' => $vo['id']))}">分享到微薄</a>
+
+                        <a onclick="postToQzone(this.name,'{$vo.ctt_summary}',this.href,this.id); return false;" title="分享到QQ空间" class="shareqzone" name="{$vo.title}" href="{$vo.ctt_img_url}" id="{:U('Home/Index/detail', array('id' => $vo['id']))}">分享到空间</a>
+
+                        <a href="javascript:void(0)" onclick="shareToSina(this.name,this.id); return false;" title="分享到新浪微博" class="sharesina" name="{$vo.title}" id="{:U('Home/Index/detail', array('id' => $vo['id']))}">分享到新浪微博</a>
+
+                        <a onclick="postToQQEmail(this.name,'{$vo.ctt_summary}',this.id,this.href); return false;" title="分享到QQ邮箱" class="shareqqemail" name="{$vo.title}" id="{$vo.ctt_img_url}" href="{:U('Home/Index/detail', array('id' => $vo['id']))}">分享到QQ邮箱</a>
+
+                        <a onclick="shareToQQ(this.name,this.href,this.id); return false;" title="分享到QQ好友" class="sharepengyou" name="{$vo.title}" furl="{$vo.ctt_img_url}" id="{:U('Home/Index/detail', array('id' => $vo['id']))}">分享到QQ好友</a>
+
+                        <a href="javascript:void(0)" onclick="shareToRenren(this.name,this.id); return false;" title="分享到人人" class="sharerenren" name="【{$vo.title}" id="{:U('Home/Index/detail', array('id' => $vo['id']))}">分享到人人</a>
+
+                        <a href="javascript:void(0)" onclick="shareToKaixin(this.name,this.id); return false;" title="分享到开心" class="sharekaixin" name="{$vo.title}" id="{:U('Home/Index/detail', array('id' => $vo['id']))}">分享到开心</a>
+                    </div>
+                </span>
+                &nbsp;&nbsp;
+                <span class="glyphicon glyphicon-arrow-up" style="cursor: pointer;" onclick="praise(this, '{$vo.id}');">赞</span>(3)&nbsp;&nbsp;
+                <span style="cursor: pointer;" data-dropdown="contentDrop" 
+                   aria-controls="contentDrop" aria-expanded="false" 
+                    onclick="javascript: $('#comm-box').slideDown();" class="glyphicon glyphicon-comment">评论(12)</span>
+         
+          </span>
+            
+            
+                  </div>
+                  
+                  
+                  <div>
+                      <div>
+                        <img src="http://i1.tietuku.com/1f73778ea702c725.jpg" alt="" width="50" height="50" class="userlogo-style">
+                    </div>
+
+                    <div class="logo-title-style">
+                        <div class="title-style">中文标题测试中文标题测试中文标题测试</div>
+                        <div class="public-info">java、互联网</div>
+                    </div>
+
+                    <p>中文内容测试测试测试中文内容测试测试测试中文内容测试测试测试中文内容测试测试测试salami ham hock biltong ball tip drumstick sirloin pancetta meatball short loin.
+                    中文内容测试测试测试中文内容测试测试测试中文内容测试测试测试中文内容测试测试测试salami 
+                    </p>
+                  </div>
+                  
+                  <div>
+                      <div>
+                        <img src="http://i1.tietuku.com/1f73778ea702c725.jpg" alt="" width="50" height="50" class="userlogo-style">
+                    </div>
+
+                    <div class="logo-title-style">
+                        <div class="title-style">中文标题测试中文标题测试中文标题测试</div>
+                        <div class="public-info">java、互联网</div>
+                    </div>
+
+                    <p>中文内容测试测试测试中文内容测试测试测试中文内容测试测试测试中文内容测试测试测试salami ham hock biltong ball tip drumstick sirloin pancetta meatball short loin.
+                    中文内容测试测试测试中文内容测试测试测试中文内容测试测试测试中文内容测试测试测试salami 
+                    </p>
+                  </div>
+                  
+                  
+                   
+               </div>
+<!--               第三列显示文章的评论-->
+<!--
+               <div class="article-comm-style">
+                   文章的评论
+               </div>
+-->
+           </div>
+       </div>
+   </div>
+   
 
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
 <!--    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>-->
     <script src="http://cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
 
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-<!--    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>-->
-<script src="slide_bar_lib/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="http://cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     
-    <script src="slide_bar_lib/js/vendor/prism.min.js"></script>
-        <script src="slide_bar_lib/js/vendor/scrollIt.min.js"></script>
-        <script src="slide_bar_lib/js/vendor/jquery.scrollTo.min.js"></script>
-        <script src="slide_bar_lib/js/vendor/jquery.localScroll.min.js"></script>
-        <script src="slide_bar_lib/js/vendor/smoothscroll.min.js"></script>
-        <script src="slide_bar_lib/js/vendor/wow.min.js"></script>
-        <script src="slide_bar_lib/js/vendor/stellar.min.js"></script>
-<!--        <script src="slide_bar_lib/js/app.js"></script>-->
-        <script type="text/javascript">
-            var switchTo5x=true;
-      </script>
+<!-- 引入点击暂时评论面板的动画js -->
 <!--
-        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-        -->
-        <!--
-        <script type="text/javascript">
-            stLight.allDefault({cns:{doNotHash:false,hashAddressBar:false,doNotCopy:false},snapsets:{snapsets:false},migration:{version:false},mobileWidget:{mobileWidget:false}});
-            
-            stLight.options({publisher: "50c49065-144f-4b6c-9e42-57d0ae4318af", doNotHash: false, doNotCopy: false, hashAddressBar: false});
-      </script>
+     <script src="js/core.js"></script>
+     <script src="js/off-screen-nav.js"></script>
 -->
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','http://cdn.bootcss.com/analytics.js/2.9.1/analytics.js','ga');
-
-          ga('create', 'UA-53442203-1', 'auto');
-          ga('send', 'pageview');
-            
-        </script>
-        
-    <script src="pageloading/modernizr.min.js"></script>
-
-    <script src="pageloading/foundation.min.js"></script>
-    <script src="pageloading/TweenMax.min.js"></script>
-    <script src="pageloading/ScrollToPlugin.min.js"></script>
-    <script src="pageloading/EaselPlugin.min.js"></script>
-    <script src="js/animate-scroll.js"></script>
-    <script>
-      $(document).foundation();  
-      $(document).animateScroll();
+<!--     <script src="js/demo.js"></script>-->
+ <script type="text/javascript">
     
-
-      var doc = document.documentElement;
-      doc.setAttribute('data-useragent', navigator.userAgent);
-    </script>
+//鼠标点击控制收缩伸展
+$(document).ready(function(){
+    var screetWidth = $(window).width();
+    var w = screetWidth * 0.39;  //展开的评论框的宽度
+//    $("#box").animate({width: w},1000);
+    //收缩效果
+    $("#ss").click(function(){
+        $("#comm-box").slideUp();
+//        $("#box").animate({width:0},1000);     
+    });
+//    $('#commBtnId');
+    //伸展效果
     
-    
-<script type="text/javascript" src="js/sharewx_v1.0.0.js"></script>
-<script type="text/javascript" src="js/share2otherwebsite.js"></script>
-<!-- 注意引入的次序，endlesspase 需要share2otherwebsite里的方法 -->
-<script type="text/javascript" src="js/endlesspage.js"></script>
-<!-- 引入点赞、差评效果设置js -->
-<script type="text/javascript" src="js/praise_bad.js"></script>
-<!-- 字体加载动画 -->
-<script src="js/jquery.textillate.js" type="text/javascript"></script>
-<script src="js/jquery.lettering.js"></script>
-<script src="js/index.js"></script>
-    
-  </body>
+});
+</script>
+ 
+<script src="js/jquery.panelslider.js"></script>
+<script>
+$('#left-panel-link').panelslider();
+// $('#right-panel-link').panelslider({side: 'right', clickClose: false, duration: 200 });
+$('#close-panel-bt').click(function() {
+    $.panelslider.close();
+});
+</script>
+</body>
 </html>
