@@ -33,9 +33,6 @@ www.sucaijiayuan.com
         });
         bodyAnimation['margin-left'] = '+=' + panelWidth;
         panelAnimation.left = '+=' + panelWidth;
-        //  修改按钮的图片
-        document.getElementById("openMenuId").style.display = 'none';  //点击展开菜单时候隐藏打开按钮
-        document.getElementById("closeMenuId").style.display = 'block'; // 显示关闭按钮
         
         break;
 
@@ -52,6 +49,14 @@ www.sucaijiayuan.com
     $body.animate(bodyAnimation, options.duration);
     panel.show().animate(panelAnimation, options.duration, function() {
       _sliding = false;
+        //  修改按钮的图片
+        //document.getElementById("openMenuId").style.display = 'none';  //点击展开菜单时候隐藏打开按钮
+        //document.getElementById("closeMenuId").style.display = 'block'; // 显示关闭按钮
+        //  展开时候显示关闭按钮，把图片 src 和 a 的 href 属性修改了
+        $("#openMenuIdImg").addClass("openMenuIdImgStyle");
+        $("#wsTitleId").addClass("openMenuIdImgStyle");  // 控制网站名称显示位置
+        $("#openMenuIdImg").attr("src", "images/menu/close3.png");
+        $("#openMenuIdImg").parent().attr("id", "close-panel-bt");
     });
   }
 
@@ -92,9 +97,8 @@ www.sucaijiayuan.com
       case 'left':
         bodyAnimation['margin-left'] = '-=' + panelWidth;
         panelAnimation.left = '-=' + panelWidth;
-        //  修改按钮的图片
-        document.getElementById("openMenuId").style.display = 'block';  //点击关闭菜单时候显示打开按钮
-        document.getElementById("closeMenuId").style.display = 'none'; // 隐藏关闭按钮
+        $("#openMenuIdImg").removeClass("openMenuIdImgStyle");
+            
         break;
 
       case 'right':
@@ -112,6 +116,14 @@ www.sucaijiayuan.com
       if(callback) {
         callback();
       }
+        //  修改按钮的图片
+//        document.getElementById("openMenuId").style.display = 'block';  //点击关闭菜单时候显示打开按钮
+//        document.getElementById("closeMenuId").style.display = 'none'; // 隐藏关闭按钮
+            
+        //  展开时候显示关闭按钮，把图片 src 和 a 的 href 属性修改了
+        $("#openMenuIdImg").attr("src", "images/menu/open2.png");
+        $("#openMenuIdImg").parent().attr("id", "left-panel-link");
+        $("#wsTitleId").removeClass("openMenuIdImgStyle");  // 控制网站名称显示位置
     });
   };
 
