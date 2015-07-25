@@ -202,8 +202,8 @@ $(function () {
 function showContent(art_id) {
     $("#contentAeraId").html();
     //  显示一秒钟背景图片  background:url(images/main/mn.jpg);
-//    $("#contentAeraId").addClass("set-article-content-bg-style");
-    $("#contentBgImg").slideDown(5000);
+    $("#contentAeraId").addClass("set-article-content-bg-style");
+//    $("#contentBgImg").slideDown(5000);
     // 延迟一秒钟再执行删除
     setTimeout(function () { 
         $("#contentAeraId").removeClass("set-article-content-bg-style");
@@ -211,4 +211,44 @@ function showContent(art_id) {
 //    $("#contentAeraId").removeClass("set-article-content-bg-style");
     
     $("#contentAeraId").html("<font color='red' size='4'>测试内容</font>");
+}
+
+/**
+ * 点击左侧的菜单显示相应的内容
+ * @param {Type} typeId 类型id；
+ */ 
+function showAllTitleByType(typeId) {
+    // 测试
+    if ('id1' === typeId) {
+        $("#articleTitleId").html();
+        $("#articleTitleId").html("<font color='red' size='5'>这是首页的内容</font>");
+        $.panelslider.close();  //关闭菜单
+    } else if ('id2' === typeId) { //最奇葩的需求
+        $("#articleTitleId").html();
+        $("#articleTitleId").html("<font color='red' size='5'>最奇葩的需求</font>");
+        $.panelslider.close();
+    } else { //最奇葩的需求
+        $("#articleTitleId").html();
+        $("#articleTitleId").html("<font color='red' size='5'>其他。。。</font>");
+        $.panelslider.close();
+    }
+    //  获取后台的数据
+    $.ajax({
+        type: "POST",
+        dataType: "text",
+        url: '',
+//        data: dataStr,
+        success: function (data) {
+        	var obj = jQuery.parseJSON(data);  
+        	//console.log("ret val = " + obj.success);
+        	if (obj.success) {
+                
+        	} else {
+                
+        	}
+            
+        },
+        error: function(data) {
+        }
+    });
 }

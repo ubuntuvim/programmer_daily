@@ -168,12 +168,12 @@
 <!-- Left panel -->
 <div id="left-panel" class="left-nav-panel">
     <ul class="nav">
-        <li><a href="index.html">首页</a></li>
-        <li><a href="#">最奇葩的需求</a></li>
-        <li><a href="#">最吐血的代码</a></li>
-        <li><a href="#">最 SB 的经理</a></li>
-        <li><a href="#">最有效的约妹大招</a></li>
-        <li><a href="#">我的日常</a></li>
+        <li><a href="#" onclick="showAllTitleByType('id1')">首页</a></li>
+        <li><a href="#" onclick="showAllTitleByType('id2')">最奇葩的需求</a></li>
+        <li><a href="#" onclick="showAllTitleByType('id3')">最吐血的代码</a></li>
+        <li><a href="#" onclick="showAllTitleByType('id4')">最 SB 的经理</a></li>
+        <li><a href="#" onclick="showAllTitleByType('id5')">最有效的约妹大招</a></li>
+        <li><a href="#" onclick="showAllTitleByType('id6')">我的日常</a></li>
       </ul>
 </div>
 
@@ -305,7 +305,7 @@
 <!--               <div class="" style="height: 100%; width: 1px; border-right: 1px solid red;">&nbsp;</div>-->
                
 <!--              第一列，显示文章的标题、摘要-->
-               <div class="article-title-style">
+               <div class="article-title-style" id="articleTitleId">
                   <div>
                       <div>
                         <img src="http://i1.tietuku.com/1f73778ea702c725.jpg" alt="" width="50" height="50" class="userlogo-style">
@@ -400,6 +400,7 @@
     <!-- 字体加载动画 -->
     <script src="js/jquery.textillate.js" type="text/javascript"></script>
     <script src="js/jquery.lettering.js"></script>
+    <script src="js/jquery.panelslider.js"></script>
     <script src="js/index.js"></script>
     
     
@@ -425,10 +426,7 @@ $(document).ready(function(){
     //伸展效果
     
 });
-</script>
- 
-<script src="js/jquery.panelslider.js"></script>
-<script>
+
 $('#left-panel-link').panelslider();
 // $('#right-panel-link').panelslider({side: 'right', clickClose: false, duration: 200 });
 $('#close-panel-bt').click(function() {
