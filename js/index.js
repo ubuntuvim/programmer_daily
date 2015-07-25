@@ -195,3 +195,20 @@ function showTaskListLoginPage() {
 $(function () {
     $('.font-animate-style').textillate();
 })
+
+/**
+ * 点击右侧的标题再左侧显示对应的文章内容
+ */
+function showContent(art_id) {
+    $("#contentAeraId").html();
+    //  显示一秒钟背景图片  background:url(images/main/mn.jpg);
+//    $("#contentAeraId").addClass("set-article-content-bg-style");
+    $("#contentBgImg").slideDown(5000);
+    // 延迟一秒钟再执行删除
+    setTimeout(function () { 
+        $("#contentAeraId").removeClass("set-article-content-bg-style");
+    }, 1000);
+//    $("#contentAeraId").removeClass("set-article-content-bg-style");
+    
+    $("#contentAeraId").html("<font color='red' size='4'>测试内容</font>");
+}
