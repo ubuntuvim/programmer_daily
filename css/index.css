@@ -1,0 +1,126 @@
+.article-content-style {
+    position: absolute;
+    left: 0;
+    width: 60%;
+   height:inherit;
+/*        background-color: antiquewhite;*/
+/*        border-right: 1px dashed #ddd;*/
+   padding-right: 5px;
+   min-height: 500px;
+}
+.set-article-content-bg-style {
+    background-image: url(../images/main/mn.jpg);
+    /* 设置图片根据图片大小自适应 */
+    -moz-background-size:cover;
+    -webkit-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+}
+/*    中间有2%的空隙 */
+.article-title-style {
+    position: absolute;
+    left: 60%;
+    width: 40%;
+/*        background-color: antiquewhite;*/
+    border-left: 1px dashed #ddd;
+    min-height: 500px;
+   padding-left: 10px;
+}
+
+.logo-title-style {
+    height: auto; 
+    width: auto; 
+    float: left; 
+    margin: -50px 0 0 50px;
+}
+.userlogo-style {
+    margin-top: 10px;
+}
+/* 标题样式 */
+.title-style {
+/*        color: #222;*/
+    font-weight: bold;
+    font-size: 17px;
+   margin: 8px 0 0 10px;
+}
+/* 文章tag样式 */
+.public-info {
+    color: #999;
+    margin: 8px 0 0 10px;
+    font-size: 14px;
+}
+
+ #comm-box { 
+     position: absolute;
+     right: 0;
+     top: 110px;
+     z-index: 1000;
+     width:40%; 
+     height:100%; 
+/*         border:2px #d7cb9a solid; */
+     background:#fff; 
+/*         text-decoration: NONE;*/
+ }
+
+ #comm-box > div > a:hover {
+     text-decoration: none;
+ }
+ /*     弹出的回复界面样式，设置工具条的文字样式 */
+ .reply-comm-style, .reply-comm-style > span > a, .reply-comm-style > span > a:hover {
+     font-size:12px; 
+     color:#999;
+     text-decoration: NONE;
+ }
+/* 左侧导航 */
+.left-nav-panel {
+    display: none;
+    width: 220px;
+    padding: 20px;
+    background-color: #eee;
+    color: #fff;
+
+}
+ /* 左侧导航 a 标签样式 */
+ .left-nav-panel ul a {
+    color: #000;
+    font-size: 16px;
+    text-decoration: none;
+}
+.left-nav-panel ul a:hover {
+      background-color: #ccc;
+/*          text-decoration: none;*/
+}
+/* 设置展开菜单时候的关闭按钮 */
+.openMenuIdImgStyle {
+    margin-left: 230px;
+}
+ /* 网站名称样式 */
+.ws-title-style {
+    font-size: 40px;
+    margin-left: 40%;
+    display: block;
+}
+.my-collapse-style {
+    display: block!important;
+    height: auto!important;
+    padding-bottom: 0;
+    overflow: visible!important;
+}
+.my-navbar-header {
+  float: left;
+}
+
+.img-center-style {
+    /* 设置图片根据图片大小自适应 */
+    -moz-background-size:cover;
+    -webkit-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    /*设置图片垂直居中*/ 
+    vertical-align:middle; 
+    /*非IE的主流浏览器识别的垂直居中的方法*/ 
+    display: table-cell; 
+    vertical-align:middle; 
+    /*设置水平居中*/ 
+    text-align:center; 
+}

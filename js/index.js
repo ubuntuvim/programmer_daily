@@ -218,20 +218,32 @@ function showContent(art_id) {
  * @param {Type} typeId 类型id；
  */ 
 function showAllTitleByType(typeId) {
+    var divId = $("#articleTitleId");
+    divId.modal('toggle');
+    
     // 测试
     if ('id1' === typeId) {
-        $("#articleTitleId").html();
-        $("#articleTitleId").html("<font color='red' size='5'>这是首页的内容</font>");
+        divId.html();  // 会把原来的内容移除
+        divId.html("<font color='red' size='5'>这是首页的内容</font>");
         $.panelslider.close();  //关闭菜单
     } else if ('id2' === typeId) { //最奇葩的需求
-        $("#articleTitleId").html();
-        $("#articleTitleId").html("<font color='red' size='5'>最奇葩的需求</font>");
+        divId.html();
+        divId.html("<font color='red' size='5'>最奇葩的需求</font>");
         $.panelslider.close();
     } else { //最奇葩的需求
-        $("#articleTitleId").html();
-        $("#articleTitleId").html("<font color='red' size='5'>其他。。。</font>");
+        divId.html();
+        divId.html("<font color='red' size='5'>其他。。。</font>");
         $.panelslider.close();
     }
+    
+    //  隐藏遮盖层
+//    divId.modal('toggle');
+    // 为了测试效果延迟一秒钟
+    setTimeout(function () { 
+        //  显示和隐藏都是调用同一个方法，bootstrap 自动判断其状态：如果执行前是显示则改为隐藏，反之则显示
+        divId.modal('toggle');
+        divId.show();
+    }, 1000);
     //  获取后台的数据
     $.ajax({
         type: "POST",

@@ -1,8 +1,5 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,122 +23,12 @@
       <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/index.css">
         
   
  
  <style type="text/css">
-   .article-content-style {
-        position: absolute;
-        left: 0;
-        width: 60%;
-       height:inherit;
-/*        background-color: antiquewhite;*/
-/*        border-right: 1px dashed #ddd;*/
-       padding-right: 5px;
-       min-height: 500px;
-    }
-    .set-article-content-bg-style {
-        background-image: url(/images/main/mn.jpg);
-        /* 设置图片根据图片大小自适应 */
-        -moz-background-size:cover;
-        -webkit-background-size:cover;
-        -o-background-size:cover;
-        background-size:cover;
-    }
-/*    中间有2%的空隙 */
-    .article-title-style {
-        position: absolute;
-        left: 60%;
-        width: 40%;
-/*        background-color: antiquewhite;*/
-        border-left: 1px dashed #ddd;
-        
-       padding-left: 10px;
-    }
-       
-   .logo-title-style {
-        height: auto; 
-        width: auto; 
-        float: left; 
-        margin: -50px 0 0 50px;
-    }
-    .userlogo-style {
-        margin-top: 10px;
-    }
-    /* 标题样式 */
-   .title-style {
-/*        color: #222;*/
-        font-weight: bold;
-        font-size: 17px;
-       margin: 8px 0 0 10px;
-   }
-    /* 文章tag样式 */
-    .public-info {
-        color: #999;
-        margin: 8px 0 0 10px;
-        font-size: 14px;
-    }
-     
-     #comm-box { 
-         position: absolute;
-         right: 0;
-         top: 110px;
-         z-index: 1000;
-         width:40%; 
-         height:100%; 
-/*         border:2px #d7cb9a solid; */
-         background:#fff; 
-/*         text-decoration: NONE;*/
-     }
-    
-     #comm-box > div > a:hover {
-         text-decoration: none;
-     }
-     /*     弹出的回复界面样式，设置工具条的文字样式 */
-     .reply-comm-style, .reply-comm-style > span > a, .reply-comm-style > span > a:hover {
-         font-size:12px; 
-         color:#999;
-         text-decoration: NONE;
-     }
-    /* 左侧导航 */
-    .left-nav-panel {
-        display: none;
-        width: 220px;
-        padding: 20px;
-        background-color: #eee;
-        color: #fff;
-      
-    }
-     /* 左侧导航 a 标签样式 */
-     .left-nav-panel ul a {
-        color: #000;
-        font-size: 16px;
-        text-decoration: none;
-    }
-    .left-nav-panel ul a:hover {
-          background-color: #ccc;
-/*          text-decoration: none;*/
-    }
-    /* 设置展开菜单时候的关闭按钮 */
-    .openMenuIdImgStyle {
-        margin-left: 230px;
-    }
-     /* 网站名称样式 */
-    .ws-title-style {
-        font-size: 40px;
-        margin-left: 40%;
-        display: block;
-    }
-    .my-collapse-style {
-        display: block!important;
-        height: auto!important;
-        padding-bottom: 0;
-        overflow: visible!important;
-    }
-    .my-navbar-header {
-      float: left;
-    }
-    
+   
    </style>
 
     
@@ -149,6 +36,9 @@
    
   
 <body style="margin-top: 110px;">
+
+<!--<img src="/images/loading/loading.gif" alt="" height="20" width="100" class="img-center-style">-->
+
 <div class="container-fluid">
 <nav class="navbar navbar-default navbar-fixed-top" style="padding: 20px 0 20px 30px;">
     <div class="my-navbar-header">
@@ -274,9 +164,10 @@
 </div>
 
    <div class="container-fluid">
+      
        <div class="row">
            <div class="col-lg-12 col-md-12 col-sm-12">
-<!--               第二列，显示文章的详细信息-->
+<!--               第一列，显示文章的详细信息-->
                <div class="article-content-style" id="contentAeraId" style="">
                  
                  <img src="images/main/mn.jpg" alt="" hidden="hiddend" id="contentBgImg">
@@ -304,8 +195,10 @@
                
 <!--               <div class="" style="height: 100%; width: 1px; border-right: 1px solid red;">&nbsp;</div>-->
                
-<!--              第一列，显示文章的标题、摘要-->
+<!--              第二列，显示文章的标题、摘要-->
                <div class="article-title-style" id="articleTitleId">
+                 
+                 
                   <div>
                       <div>
                         <img src="http://i1.tietuku.com/1f73778ea702c725.jpg" alt="" width="50" height="50" class="userlogo-style">
@@ -432,6 +325,8 @@ $('#left-panel-link').panelslider();
 $('#close-panel-bt').click(function() {
     $.panelslider.close();
 });
+
+
 </script>
 
     </div>
